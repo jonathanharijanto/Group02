@@ -30,8 +30,10 @@ public class ApiControllerDocTesterTest extends NinjaDocTester {
     
     String URL_INDEX = "/";
     String URL_HELLO_WORLD_JSON = "/hello_world.json";
-    String URL_ACES_UP = "/AcesUp"
-    
+    String URL_ACES_UP = "/AcesUp";
+
+
+
 //    @Test
 //    public void testGetIndex() {
 //
