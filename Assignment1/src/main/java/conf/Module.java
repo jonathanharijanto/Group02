@@ -30,3 +30,4 @@ public class Module extends AbstractModule {
     }
 
 }
+
