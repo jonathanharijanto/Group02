@@ -25,11 +25,9 @@ import com.google.inject.Singleton;
 
 import model.Card;
 import model.Deck;
-import ninja.Context;
 import ninja.Result;
 import ninja.Results;
 
-import com.google.inject.Singleton;
 import ninja.params.Param;
 import ninja.params.PathParam;
 
@@ -43,13 +41,13 @@ public class ApplicationController {
         return Results.html();
     }
 
-    public Result acesUp() {
-     //  model.Card =  model.Deck.drawFromDeck();
-        return Results.html().template("views/AcesUp/AcesUp.flt.html");
-    }
-    public Result userInput(@PathParam("button") Integer button ){
-        Result result = Results.html().template("views/AcesUp/AcesUpStart.flt.html");
+   public Result acesUp() {
 
+        return Results.html().template("views/AcesUp/AcesUp.flt.html");
+   }
+    public Result userInput(@Param("input") Integer button ){
+        Result result = Results.html().template("views/AcesUp/AcesUp.flt.html");
+//
         Deck deck = new Deck();
 
         ArrayList<Card> col1;
@@ -61,17 +59,26 @@ public class ApplicationController {
         ArrayList<Card> col4;
         col4 = new ArrayList<Card>();
 
+
+
         //Deal
-        if(button == 0){
+        if(button == 9){
 
             col1.add(deck.drawFromDeck());
             col2.add(deck.drawFromDeck());
             col3.add(deck.drawFromDeck());
             col4.add(deck.drawFromDeck());
-            result.render("card1", col1.get( (col1.size())-1 ));
-            result.render("card2", col2.get( (col2.size())-1 ));
-            result.render("card3", col3.get( (col3.size())-1 ));
-            result.render("card4", col4.get( (col4.size())-1 ));
+
+        //    String c1 = String.format("card1%2d", col1.size());
+
+        //    result.render( c1 , col1.get( (col1.size())-1 ));
+           // result.render(("card2%2d", (col2.size())-1), col2.get( (col2.size())-1 ));
+          //  result.render(("card3%2d", (col3.size())-1), col3.get( (col3.size())-1 ));
+          //  result.render(("card4%2d", (col4.size())-1), col4.get( (col4.size())-1 ));
+            result.render(("card11"), col1.get( (col1.size())-1 ));
+            result.render(("card21"), col2.get( (col2.size())-1 ));
+            result.render(("card31"), col3.get( (col3.size())-1 ));
+            result.render(("card41"), col4.get( (col4.size())-1 ));
 
         }
         //Col 1 Move
