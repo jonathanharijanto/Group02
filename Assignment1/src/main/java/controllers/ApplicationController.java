@@ -23,7 +23,8 @@ package controllers;
 import com.google.inject.Singleton;
 
 
-
+import model.Card;
+import model.Deck;
 import ninja.Context;
 import ninja.Result;
 import ninja.Results;
@@ -31,6 +32,8 @@ import ninja.Results;
 import com.google.inject.Singleton;
 import ninja.params.Param;
 import ninja.params.PathParam;
+
+import java.util.ArrayList;
 
 
 @Singleton
@@ -47,10 +50,17 @@ public class ApplicationController {
     public Result userInput(@PathParam("button") Integer button ){
         Result result = Results.html().template("views/AcesUp/AcesUp.flt.html");
 
-
+        Deck deck = new Deck();
 
         if(button == 0){
-            
+            Card card1 = deck.drawFromDeck();
+            Card card2 = deck.drawFromDeck();
+            Card card3 = deck.drawFromDeck();
+            Card card4 = deck.drawFromDeck();
+            result.render("card1", card1);
+            result.render("card2", card2);
+            result.render("card3", card3);
+            result.render("card4", card4);
         }else if(button == 1){
 
         }else if(button == 2){
