@@ -16,10 +16,21 @@
 
 package controllers;
 
+
+
+//package model;
+
+import com.google.inject.Singleton;
+
+
+
+import ninja.Context;
 import ninja.Result;
 import ninja.Results;
 
 import com.google.inject.Singleton;
+import ninja.params.Param;
+import ninja.params.PathParam;
 
 
 @Singleton
@@ -30,7 +41,40 @@ public class ApplicationController {
     }
 
     public Result acesUp() {
+     //  model.Card =  model.Deck.drawFromDeck();
         return Results.html().template("views/AcesUp/AcesUp.flt.html");
     }
+    public Result userInput(@PathParam("button") Integer button ){
+        Result result = Results.html().template("views/AcesUp/AcesUp.flt.html");
+
+
+
+        if(button == 0){
+            
+        }else if(button == 1){
+
+        }else if(button == 2){
+
+        }else if(button == 3){
+
+        }else if(button == 4){
+
+        }else if(button == 5){
+
+        }else if(button == 6){
+
+        }else if(button == 7){
+
+        }else if(button == 8){
+
+        }
+
+            return result;
+     //   return Results.html().template("views/testview/testview.ftl.html");
+    }
+
+
+
+
 
 }
