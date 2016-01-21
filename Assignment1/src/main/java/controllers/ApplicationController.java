@@ -48,34 +48,62 @@ public class ApplicationController {
         return Results.html().template("views/AcesUp/AcesUp.flt.html");
     }
     public Result userInput(@PathParam("button") Integer button ){
-        Result result = Results.html().template("views/AcesUp/AcesUp.flt.html");
+        Result result = Results.html().template("views/AcesUp/AcesUpStart.flt.html");
 
         Deck deck = new Deck();
 
+        ArrayList<Card> col1;
+        col1 = new ArrayList<Card>();
+        ArrayList<Card> col2;
+        col2 = new ArrayList<Card>();
+        ArrayList<Card> col3;
+        col3 = new ArrayList<Card>();
+        ArrayList<Card> col4;
+        col4 = new ArrayList<Card>();
+
+        //Deal
         if(button == 0){
-            Card card1 = deck.drawFromDeck();
-            Card card2 = deck.drawFromDeck();
-            Card card3 = deck.drawFromDeck();
-            Card card4 = deck.drawFromDeck();
-            result.render("card1", card1);
-            result.render("card2", card2);
-            result.render("card3", card3);
-            result.render("card4", card4);
-        }else if(button == 1){
 
-        }else if(button == 2){
+            col1.add(deck.drawFromDeck());
+            col2.add(deck.drawFromDeck());
+            col3.add(deck.drawFromDeck());
+            col4.add(deck.drawFromDeck());
+            result.render("card1", col1.get( (col1.size())-1 ));
+            result.render("card2", col2.get( (col2.size())-1 ));
+            result.render("card3", col3.get( (col3.size())-1 ));
+            result.render("card4", col4.get( (col4.size())-1 ));
 
-        }else if(button == 3){
+        }
+        //Col 1 Move
+        else if(button == 1){
 
-        }else if(button == 4){
+        }
+        //Col 1 remove
+        else if(button == 2){
 
-        }else if(button == 5){
+        }
+        //Col 2 Move
+        else if(button == 3){
 
-        }else if(button == 6){
+        }
+        //Col 2 remove
+        else if(button == 4){
 
-        }else if(button == 7){
+        }
+        //Col 3 Move
+        else if(button == 5){
 
-        }else if(button == 8){
+        }
+        //Col 3 remove
+        else if(button == 6){
+
+        }
+        //Col 4 Move
+        else if(button == 7){
+
+        }
+        //Col 4 remove
+        else if(button == 8){
 
         }
 
