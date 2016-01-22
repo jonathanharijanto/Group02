@@ -7,12 +7,13 @@ import java.util.ArrayList;
  */
 public class Game {
 
-    Deck deck= new Deck();
 
-    Col col1 = new Col();
-    Col col2 = new Col();
-    Col col3 = new Col();
-    Col col4 = new Col();
+    private Deck deck= new Deck();
+
+    private Col col1 = new Col();
+    private Col col2 = new Col();
+    private Col col3 = new Col();
+    private Col col4 = new Col();
 
     public void Deal(){
 
