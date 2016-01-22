@@ -25,6 +25,9 @@ import com.google.inject.Singleton;
 
 import model.Card;
 import model.Deck;
+
+import model.Move;
+
 import ninja.Result;
 import ninja.Results;
 
@@ -49,6 +52,7 @@ public class ApplicationController {
         Result result = Results.html().template("views/AcesUp/AcesUp.flt.html");
 //
         Deck deck = new Deck();
+        Move move = new Move();
 
         ArrayList<Card> col1;
         col1 = new ArrayList<Card>();
@@ -65,7 +69,7 @@ public class ApplicationController {
             col1.add(deck.drawFromDeck());
             col2.add(deck.drawFromDeck());
             col3.add(deck.drawFromDeck());
-            col4.add(deck.drawFromDeck());
+            //col4.add(deck.drawFromDeck());
         }
 
         //Deal
@@ -77,67 +81,67 @@ public class ApplicationController {
                 result.render(("card11"), col1.get((col1.size()) - 13));
                 result.render(("card21"), col2.get((col2.size()) - 13));
                 result.render(("card31"), col3.get((col3.size()) - 13));
-                result.render(("card41"), col4.get((col4.size()) - 13));
+            //    result.render(("card41"), col4.get((col4.size()) - 13));
             //             }else if(count == 2){
                 result.render(("card12"), col1.get( (col1.size())-12 ));
                 result.render(("card22"), col2.get( (col2.size())-12 ));
                 result.render(("card32"), col3.get( (col3.size())-12 ));
-                result.render(("card42"), col4.get( (col4.size())-12 ));
+            //    result.render(("card42"), col4.get( (col4.size())-12 ));
             //            }else if(count == 3){
                 result.render(("card13"), col1.get( (col1.size())-11 ));
                 result.render(("card23"), col2.get( (col2.size())-11 ));
                 result.render(("card33"), col3.get( (col3.size())-11 ));
-                result.render(("card43"), col4.get( (col4.size())-11 ));
+            //    result.render(("card43"), col4.get( (col4.size())-11 ));
             //          }else if(count == 4){
                 result.render(("card14"), col1.get( (col1.size())-10 ));
                 result.render(("card24"), col2.get( (col2.size())-10 ));
                 result.render(("card34"), col3.get( (col3.size())-10 ));
-                result.render(("card44"), col4.get( (col4.size())-10 ));
+            //    result.render(("card44"), col4.get( (col4.size())-10 ));
             //        }else if(count == 5){
                 result.render(("card15"), col1.get( (col1.size())-9 ));
                 result.render(("card25"), col2.get( (col2.size())-9 ));
                 result.render(("card35"), col3.get( (col3.size())-9 ));
-                result.render(("card45"), col4.get( (col4.size())-9 ));
+            //    result.render(("card45"), col4.get( (col4.size())-9 ));
             //       }else if(count == 6){
                 result.render(("card16"), col1.get( (col1.size())-8 ));
                 result.render(("card26"), col2.get( (col2.size())-8 ));
                 result.render(("card36"), col3.get( (col3.size())-8 ));
-                result.render(("card46"), col4.get( (col4.size())-8 ));
+             //   result.render(("card46"), col4.get( (col4.size())-8 ));
             //       }else if(count == 7){
                 result.render(("card17"), col1.get( (col1.size())-7 ));
                 result.render(("card27"), col2.get( (col2.size())-7 ));
                 result.render(("card37"), col3.get( (col3.size())-7 ));
-                result.render(("card47"), col4.get( (col4.size())-7 ));
+               // result.render(("card47"), col4.get( (col4.size())-7 ));
             //      }else if(count == 8){
                 result.render(("card18"), col1.get( (col1.size())-6 ));
                 result.render(("card28"), col2.get( (col2.size())-6 ));
                 result.render(("card38"), col3.get( (col3.size())-6 ));
-                result.render(("card48"), col4.get( (col4.size())-6 ));
+              //  result.render(("card48"), col4.get( (col4.size())-6 ));
             //      }else if(count == 9){
                 result.render(("card19"), col1.get( (col1.size())-5 ));
                 result.render(("card29"), col2.get( (col2.size())-5 ));
                 result.render(("card39"), col3.get( (col3.size())-5 ));
-                result.render(("card49"), col4.get( (col4.size())-5 ));
+              //  result.render(("card49"), col4.get( (col4.size())-5 ));
             //        }else if(count == 10){
                 result.render(("card110"), col1.get( (col1.size())-4 ));
                 result.render(("card210"), col2.get( (col2.size())-4 ));
                 result.render(("card310"), col3.get( (col3.size())-4 ));
-                result.render(("card410"), col4.get( (col4.size())-4 ));
+               // result.render(("card410"), col4.get( (col4.size())-4 ));
             //       }else if(count == 11){
                 result.render(("card111"), col1.get( (col1.size())-3 ));
                 result.render(("card211"), col2.get( (col2.size())-3 ));
                 result.render(("card311"), col3.get( (col3.size())-3 ));
-                result.render(("card411"), col4.get( (col4.size())-3 ));
+              //  result.render(("card411"), col4.get( (col4.size())-3 ));
             //       }else if(count == 12){
                 result.render(("card112"), col1.get( (col1.size())-2 ));
                 result.render(("card212"), col2.get( (col2.size())-2 ));
                 result.render(("card312"), col3.get( (col3.size())-2 ));
-                result.render(("card412"), col4.get( (col4.size())-2 ));
+               // result.render(("card412"), col4.get( (col4.size())-2 ));
             //      }else if(count == 13) {
                 result.render(("card113"), col1.get((col1.size()) - 1));
                 result.render(("card213"), col2.get((col2.size()) - 1));
                 result.render(("card313"), col3.get((col3.size()) - 1));
-                result.render(("card413"), col4.get((col4.size()) - 1));
+                //result.render(("card413"), col4.get((col4.size()) - 1));
             //     }
 
 
@@ -145,8 +149,14 @@ public class ApplicationController {
 
         }
         //Col 1 Move
-        else if(button == 1){
-
+        else if(button == 1) {
+            if (move.checkColumn(col2)) {
+                //move.moveCard(col1,col2);
+            } else if (Move.checkColumn(col3)) {
+                //move.moveCard(col1,col3);
+            } else if (Move.checkColumn(col4)) {
+                //move.moveCard(col1,col4);
+            }
         }
         //Col 1 remove
         else if(button == 2){
@@ -154,23 +164,41 @@ public class ApplicationController {
         }
         //Col 2 Move
         else if(button == 3){
-
+            if (move.checkColumn(col2)) {
+                //move.moveCard(col2,col1);
+            } else if (Move.checkColumn(col3)) {
+                //move.moveCard(col2,col3);
+            } else if (Move.checkColumn(col4)) {
+                //move.moveCard(col2,col4);
+            }
         }
         //Col 2 remove
         else if(button == 4){
 
         }
         //Col 3 Move
-        else if(button == 5){
-
+        else if(button == 5) {
+            if (move.checkColumn(col2)) {
+                //move.moveCard(col3,col1);
+            } else if (Move.checkColumn(col3)) {
+                //move.moveCard(col3,col2);
+            } else if (Move.checkColumn(col4)) {
+                //move.moveCard(col3,col4);
+            }
         }
         //Col 3 remove
         else if(button == 6){
 
         }
         //Col 4 Move
-        else if(button == 7){
-
+        else if(button == 7) {
+            if (move.checkColumn(col1)) {
+                //move.moveCard(col4,col1);
+            } else if (Move.checkColumn(col2)) {
+                //move.moveCard(col4,col23);
+            } else if (Move.checkColumn(col3)) {
+                //move.moveCard(col4,col3);
+            }
         }
         //Col 4 remove
         else if(button == 8){

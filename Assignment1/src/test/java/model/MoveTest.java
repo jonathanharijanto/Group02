@@ -21,7 +21,7 @@ public class MoveTest {
     @Test
     public void testEqualSuit(){
         Move mov = new Move();
-        assertArrayEquals(new int[]{1,2,3},new int[]{1,2,3});
+        assertArrayEquals(new int[]{},new int[]{});
     }
 
 }
