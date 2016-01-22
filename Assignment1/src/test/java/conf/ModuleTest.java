@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2012 the original author or authors.
+ * Copyright (C) 2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,18 +16,22 @@
 
 package conf;
 
-import com.google.inject.AbstractModule;
-import com.google.inject.Singleton;
+import org.junit.Test;
 
-@Singleton
-public class Module extends AbstractModule {
-    
+import ninja.NinjaDocTester;
+import org.doctester.testbrowser.Request;
+import org.doctester.testbrowser.Response;
+import org.hamcrest.CoreMatchers;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
 
-    protected void configure() {
-        
-        // bind your injections here!
-        
-    }
+import static org.junit.Assert.*;
+
+/**
+ * Created by Taylor on 1/16/2016.
+ */
+public class ModuleTest extends NinjaDocTester {
+
 
 }
 
