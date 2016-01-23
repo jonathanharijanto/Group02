@@ -27,12 +27,12 @@ public class Routes implements ApplicationRoutes {
 
     @Override
     public void init(Router router) {  
-        
-//        router.GET().route("/").with(ApplicationController.class, "index");
-//        router.GET().route("/hello_world.json").with(ApplicationController.class, "helloWorldJson");
-       router.GET().route("/").with(ApplicationController.class, "acesUp");
+
+//      router.GET().route("/hello_world.json").with(ApplicationController.class, "helloWorldJson");
+        router.GET().route("/").with(ApplicationController.class, "index");
+        router.GET().route("/").with(ApplicationController.class, "acesUp");
         router.POST().route("/").with(ApplicationController.class, "userInput");
-  //      router.GET().route("/AcesUp/AcesUp/{button}").with(Results.redirect("/AcesUp"));
+        //    router.GET().route("/AcesUp/AcesUp/{button}").with(Results.redirect("/AcesUp"));
 
         ///////////////////////////////////////////////////////////////////////
         // Assets (pictures / javascript)

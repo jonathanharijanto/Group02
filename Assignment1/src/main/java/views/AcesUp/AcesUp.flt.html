@@ -1,3 +1,4 @@
+<html>
 <h1>Aces Up</h1>
 
 <link href="/assets/css/AcesUp.css" rel="stylesheet">
@@ -115,6 +116,41 @@
 <form method="post" action="AcesUp">
 <button name="input" value="9" id="dealButton">Deal</button>
 </form>
+
+<script>
+
+var list;
+
+function display(list) {
+$( '#display' ).html("");
+  $.each(list.Card, function( key, value ) {
+    $( '#TodoList' ).append("Rank: " + value.rank+ "; Suit: " +value.suit + "<BR>");
+  });
+}
+
+$.getJSON("http://localhost:8080/todoList.json", function( data ) {
+display(data);
+list = data;
+});
+
+$("#dealButton").click(function(){
+list.action = "add";
+list.item = $("#txt_name").val();
+
+$.ajax({
+  type: "POST",
+  url: "/todoList.json",
+  data: JSON.stringify(list),
+  success: function(data, status){console.log("Data: " + data + "\nStatus: " + status);
+        list = data;
+        display(data);},
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+});
+});
+</script>
+
+
 
 </body>
 </html>

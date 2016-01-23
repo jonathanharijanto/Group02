@@ -23,6 +23,19 @@ public class Game {
         col4.addCard(deck.drawFromDeck());
 
     }
+    public static boolean checkColumn(ArrayList<Card> cardArray) {
+        int cardSize = cardArray.size();
+        if (cardSize == 0) {
+            return true;
+        }
+        return false;
+    }
 
+    public static void moveCard(ArrayList<Card> cardSource, ArrayList<Card> cardDestination) {
+        int lastCardIndex = cardSource.size() - 1;
+        Card temp = cardSource.get(lastCardIndex);
+        cardDestination.add(temp);
+        //call removeClass cardDestination[lastCardIndex]
+    }
 
 }
