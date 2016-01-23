@@ -23,8 +23,7 @@ public class GameTest {
 
         assertNotNull(game.col1.topCard());
 
-<<<<<<< HEAD
-    }*/
+    }
 
 // Begin Compare portion tests ------------------------
     @Test
@@ -94,7 +93,4 @@ public class GameTest {
         assertEquals(false, game.can_remove(tenspades,fivespades));
     }
 // End Compare portion tests ---------------------------------------------
-=======
     }
->>>>>>> 5119aba2e77ba116fe9bec20330c97a358ad75b8
-}
