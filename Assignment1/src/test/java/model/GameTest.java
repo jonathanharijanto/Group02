@@ -23,7 +23,7 @@ public class GameTest {
 
     }*/
 
-// Begin Compare portion tests -----------------------
+// Begin Compare portion tests ------------------------
     @Test
     public void testGameExists(){
        Game game = new Game();
