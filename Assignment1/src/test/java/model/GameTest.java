@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
+import static org.junit.Assert.assertArrayEquals;
 
 /**
  * Created by Cameron on 1/22/2016.
@@ -19,6 +20,11 @@ public class GameTest {
         assertNotNull(col);
     }
 
+    @Test
+    public void testEqualSuit() {
+        Move mov = new Move();
+        assertArrayEquals(new int[]{}, new int[]{});
+    }
     /*
     @Test
     public void testDeal(){
