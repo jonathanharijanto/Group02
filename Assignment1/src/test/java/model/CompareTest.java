@@ -56,4 +56,13 @@ public class CompareTest {
         Compare comp = new Compare();
         assertEquals(false, comp.compare_face("5","4","l"));
     }
+    @Test
+    public void testCardRankCompare(){
+        Card card = new Card(2,3);
+        assertEquals(3,card.getRank());
+    }
+    public void testCardSuitCompare(){
+        Card card = new Card(2,3);
+        assertEquals(2,card.getSuit());
+    }
 }
