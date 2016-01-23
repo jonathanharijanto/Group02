@@ -53,6 +53,7 @@ public class GameTest {
         Game game = new Game();
         assertEquals(true, game.compare_face(13,8,"g"));
     }
+
     @Test
     public void testFirstNumBiggerFalse(){
         Game game = new Game();
